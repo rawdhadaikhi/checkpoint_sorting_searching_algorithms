@@ -1,0 +1,30 @@
+PROCEDURE insertion_sort(VAR arr : ARRAY_OF INTEGER, n : INTEGER)
+VAR
+key , j ,i : INTEGER;
+
+BEGIN
+FOR i FROM 1 TO n STEP 1  DO
+{
+    
+    j = i;
+ 		while (j > 0 && arr[j - 1] > arr[j]) 
+ 		{
+ 			key = arr[j];
+ 			arr[j] = arr[j - 1];
+ 			arr[j - 1] = key;
+ 			j--;
+ 		}
+	}
+
+}
+END_FOR
+END
+ALGORITHM sorting_array
+VAR
+  arr: ARRAY_OF INTEGER[7];
+   
+     
+BEGIN
+ arr := {2,5,1,9,8,7,4};
+insertion_sort(arr,7);
+END
