@@ -3,17 +3,18 @@ VAR
 key , j ,i : INTEGER;
 
 BEGIN
-FOR i FROM 1 TO n STEP 1  DO
+FOR i FROM 2 TO n STEP 1  DO
 {
     
     j = i;
- 		while (j > 0 && arr[j - 1] > arr[j]) 
+ 		while (j > 1 && arr[j - 1] > arr[j]) 
  		{
- 			key = arr[j];
- 			arr[j] = arr[j - 1];
- 			arr[j - 1] = key;
+ 			key := arr[j];
+ 			arr[j] := arr[j - 1];
+ 			arr[j - 1] := key;
  			j--;
  		}
+		
 	}
 
 }
